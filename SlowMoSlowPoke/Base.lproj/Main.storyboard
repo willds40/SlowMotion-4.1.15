@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wZ4-m5-6d9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!-- SLOWPOKE-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5J-j6-a2E">
+                                <rect key="frame" x="0.0" y="172" width="600" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Cj0-yi-cmu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="36z-fj-JND">
+                                <rect key="frame" x="211" y="499" width="179" height="29"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Slow Motion"/>
+                                </segments>
+                                <connections>
+                                    <action selector="FPSSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="TnX-4v-Q12"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3Z-Aa-jXG" userLabel="recBtn">
+                                <rect key="frame" x="278" y="547" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="q3Z-Aa-jXG" secondAttribute="height" multiplier="1:1" id="od8-Ed-gOy"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="recordButton.png"/>
+                                <connections>
+                                    <action selector="recBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0AB-fx-ZCM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="antenna.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TUC-0S-LTY">
+                                <rect key="frame" x="230" y="76" width="140" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TUC-0S-LTY" secondAttribute="height" multiplier="140:97" id="C5H-Hz-Acz"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3U-9c-oJK" propertyAccessControl="none">
+                                <rect key="frame" x="0.0" y="172" width="600" height="296"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q3Z-Aa-jXG" secondAttribute="bottom" constant="8" id="0SC-uf-mqf"/>
+                            <constraint firstItem="q3Z-Aa-jXG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="3:40" id="37k-nc-Nq8"/>
+                            <constraint firstItem="TUC-0S-LTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="210" id="3bJ-SO-Zw1"/>
+                            <constraint firstItem="T3U-9c-oJK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="AQm-nj-b3I"/>
+                            <constraint firstItem="q3Z-Aa-jXG" firstAttribute="top" secondItem="36z-fj-JND" secondAttribute="bottom" constant="20" id="Jh3-4c-Rpp"/>
+                            <constraint firstItem="T3U-9c-oJK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="MEw-8x-g8V"/>
+                            <constraint firstItem="G5J-j6-a2E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="PKi-Sj-QqP"/>
+                            <constraint firstItem="36z-fj-JND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UFJ-Kv-8QR"/>
+                            <constraint firstItem="TUC-0S-LTY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="7:30" id="Umh-5n-dKa"/>
+                            <constraint firstItem="36z-fj-JND" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="179:600" id="VnE-Pe-7to"/>
+                            <constraint firstItem="q3Z-Aa-jXG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W2O-Fv-6pc"/>
+                            <constraint firstItem="TUC-0S-LTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XOE-4z-v8Y"/>
+                            <constraint firstItem="TUC-0S-LTY" firstAttribute="top" secondItem="G5J-j6-a2E" secondAttribute="bottom" constant="-141" id="XwG-OI-lUB"/>
+                            <constraint firstItem="T3U-9c-oJK" firstAttribute="top" secondItem="G5J-j6-a2E" secondAttribute="bottom" constant="-45" id="bgT-3l-lQi"/>
+                            <constraint firstItem="36z-fj-JND" firstAttribute="top" secondItem="T3U-9c-oJK" secondAttribute="bottom" constant="31" id="co9-SS-urZ"/>
+                            <constraint firstItem="G5J-j6-a2E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="172" id="lIa-Za-6iq"/>
+                            <constraint firstItem="G5J-j6-a2E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vkl-Kg-z7q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TUC-0S-LTY" secondAttribute="trailing" constant="210" id="xqG-Fr-F9F"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3bJ-SO-Zw1"/>
+                                <exclude reference="xqG-Fr-F9F"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title=" SLOWPOKE" id="QCX-YQ-rZk">
+                        <barButtonItem key="rightBarButtonItem" title="Videos" id="3sB-8l-Nxo">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="6v3-7r-EVZ" kind="show" id="H0T-GB-VKr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="FPSOutlet" destination="36z-fj-JND" id="iSx-hb-IZC"/>
+                        <outlet property="preview" destination="T3U-9c-oJK" id="UfF-yN-jp1"/>
+                        <outlet property="recBtn" destination="q3Z-Aa-jXG" id="i7u-r8-MG0"/>
+                        <outlet property="statusUpdate" destination="G5J-j6-a2E" id="pCg-Up-LWf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="59"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Gvz-qg-3WO">
+            <objects>
+                <navigationController id="wZ4-m5-6d9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3nY-kn-fDH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VTe-Ut-u1l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAN-mQ-YsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442" y="356"/>
+        </scene>
+        <!--Movie Collection View Controller-->
+        <scene sceneID="19H-ad-hy2">
+            <objects>
+                <collectionViewController id="6v3-7r-EVZ" customClass="MovieCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4fE-xF-TxO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gVy-8W-hsR">
+                            <size key="itemSize" width="92" height="87"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" id="Wdh-sy-7h2">
+                                <rect key="frame" x="0.0" y="64" width="92" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="92" height="87"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6v3-7r-EVZ" id="og2-0Q-ipl"/>
+                            <outlet property="delegate" destination="6v3-7r-EVZ" id="gxW-cx-pIo"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="TGm-Di-P3r"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joB-iO-Vaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="antenna.jpg" width="170" height="91"/>
+        <image name="recordButton.png" width="120" height="120"/>
+    </resources>
+</document>
